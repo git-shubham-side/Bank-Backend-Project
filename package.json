@@ -1,0 +1,31 @@
+{
+  "name": "bank-backend-project",
+  "version": "1.0.0",
+  "description": "a backend bank system project to implement the bank transaction",
+  "keywords": [
+    "bank",
+    "system",
+    "backend",
+    "project"
+  ],
+  "homepage": "https://github.com/git-shubham-side/Bank-Backend-Project#readme",
+  "bugs": {
+    "url": "https://github.com/git-shubham-side/Bank-Backend-Project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/git-shubham-side/Bank-Backend-Project.git"
+  },
+  "license": "ISC",
+  "author": "Shubham Rathod",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
