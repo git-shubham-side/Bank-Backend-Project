@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 async function conn() {
   try {
     await mongoose.connect("mongodb://127.0.0.1:27017/test");
-    add();
+    await add();
   } catch (err) {
     console.log(err);
   }
@@ -26,13 +26,16 @@ const userSchema = mongoose.Schema(
   },
 );
 
+userSchema.post("save", function () {
+  console.log("---------------------", this);
+});
+
 const User = mongoose.model("User", userSchema);
 
 async function add() {
-  // let user3 = await User.create({ name: "lalalalla", password: "lalalalal" });
-  // console.log(user3);
-  let res = await User.find({ name: "lalalalla" });
-  console.log(res);
+  await User.create({ name: "dfdf", password: "justadded" });
+  // let res = await User.find({ name: "lalalalla" });
+  // console.log(res);
   await mongoose.disconnect();
 }
 
